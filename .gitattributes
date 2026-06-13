@@ -1,0 +1,10 @@
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.pdf binary
+*.xlsx binary
+
+# 官方原始资料必须保留下载时的字节，避免换行规范化破坏 SHA256。

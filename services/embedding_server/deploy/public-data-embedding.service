@@ -1,0 +1,16 @@
+[Unit]
+Description=Public Data Agent Embedding Server
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=%h/code/public-data-agent-embedding
+EnvironmentFile=%h/.config/public-data-agent-embedding.env
+Environment=CUDA_VISIBLE_DEVICES=2
+ExecStart=%h/code/public-data-agent-embedding/.python -m embedding_server
+Restart=on-failure
+RestartSec=5
+TimeoutStartSec=180
+
+[Install]
+WantedBy=default.target
